@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <input type="text" id="salary" placeholder=""> -->
+
+
+<input type="text" id="first_number" placeholder="enter first number">
+<input type="text" id="second_number" placeholder="enter second number">
+<input type="text" id="operators" placeholder="enter operators">
+<button onclick="number_and_mathematical()">number and mathematical</button>
+<p id="check_result"></p>
+
+<input type="text" id="enter_charges" placeholder="Number of days">
+<input type="text" id="library_bill" placeholder="library bill" disabled>
+<button onclick="library_charges()">library charges</button>
+
+<br><br><input type="text" id="enter_kilometers" placeholder="enter kilometers">
+<input type="text" id="kilometers_bill" placeholder="kilometers bill">
+<button onclick="kilometers_bill()">kilometers bill</button>
+
+<br><br>
+<input type="text" id="english" placeholder="enter english marks">
+<input type="text" id="math" placeholder="enter math marks">
+<input type="text" id="science" placeholder="enter science marks">
+<input type="text" id="social_studies" placeholder="enter social sudies marks">
+<button onclick="check_marks()">check marks</button>
+<p id="check_marks"></p>
+
+<br><br>
+<input type="text" id="check_BMI" placeholder="underweight">
+<input type="text" id="check_BMI" placeholder="normal weight">
+<input type="text" id="check_BMI" placeholder="overweight">
+<input type="text" id="check_BMI" placeholder="obese">
+<button onclick="calculate_BMI()">calculate BMI</button>
+<br>
+<br>
+<button onclick="quadratic()">equation</button>
+<p id="result"></p>
+
+
+
+
+    <script>
+        function library_charges(){
+            var salary=Number(document.getElementById(salary).value)
+            if(years>=10){
+                var bonus=salary*10%100
+                var total_salary=salary+bonus
+                document.getElementById("bonus_to_employee").innerHTML="total_salary"
+            }
+            else if(year>=6){
+                var bonus=salary*8%100
+
+            }
+            
+        }
+
+        // 2. Write a program to accept two numbers and mathematical operators and perform operations accordingly.
+
+        function number_and_mathematical(){
+            var first_number=Number(document.getElementById("first_number").value)
+            var second_number=Number(document.getElementById("second_number").value)
+            var sign=document.getElementById("operators").value
+            if(sign=="+"){
+                var add=first_number+second_number
+                document.getElementById("check_result").innerHTML=add
+            }
+            else if(sign=="-"){
+                var subtract=first_number-second_number
+                document.getElementById("check_result").innerHTML=subtract
+            }
+            else if(sign=="*"){
+                var multiply=first_number*second_number
+                document.getElementById("check_result").innerHTML=multiply
+            }
+            else if(sign=="/"){
+                var divide=first_number/second_number
+                document.getElementById("check_result").innerHTML=divide
+            }
+
+        }
+
+    //    3. Accept the number of days from the user and calculate the charge for library according to following:
+
+    function library_charges(){
+        var days=Number(document.getElementById("enter_charges").value)
+        if(days<=5){
+            var price=days*2
+            document.getElementById("library_bill").value=price
+        }
+        else if(days>5 & days<=10){
+            var price=days*3
+            document.getElementById("library_bill").value=price
+        }
+        else if(days>10 & days<=15){
+            var price=days*4
+            document.getElementById("library_bill").value=price
+        }
+        else{
+            var price=days*5
+            document.getElementById("library_bill").value=price
+        }
+    }
+
+    //  4. Accept the kilometres covered and calculate the bill according to the following criteria:
+
+     function kilometers_bill(){
+    var kilometers=Number(document.getElementById("enter_kilometers").value)
+    if(kilometers<=10){
+        var rupees=kilometers*11
+        document.getElementById("kilometers_bill").value=rupees
+        
+    }
+    else if(kilometers>10 & kilometers<=90){
+        var rupees=kilometers*10
+        document.getElementById("kilometers_bill").value=rupees
+    }
+    else{
+        var rupees=kilometers*9
+    }
+}
+
+// 5. Accept the marks of English, Math and Science, Social Studies Subject and display the stream allotted according to following
+
+function check_marks(){
+    var english=Number(document.getElementById("english")).value
+    var math=Number(document.getElementById("math").value)
+    var science=Number(document.getElementById("science")).value
+    var social_studies=Number(document.getElementById("social studies")).value
+
+    if(english>80 && math>80 && science>80 && social_studies>80){
+        document.getElementById("check_marks").innerHTML="science stream"
+    }
+    else if(english>80 && math>50 || science>50){
+        document.getElementById("check_marks").innerHTML="commerce stream"
+    }
+    else if(english>80 && social_studies>80){
+        document.getElementById("check_marks").innerHTML="humanities"
+    }
+    else{
+        document.getElementById("check_marks").innerHTML="constant"
+    }
+}
+
+// 6 .Write a program that interprets the Body Mass Index (BMI) based on a user’s weight and height.
+
+function BMI(){
+
+    if(bmi<18.5){
+        document.getElementById("check_BMI").innerHTML="underweight"
+    }
+    else if(bmi >= 18.5 && bmi < 25){
+        document.getElementById("check_BMI").innerHTML="normal weight"
+    } 
+    else if(bmi >= 25 && bmi < 30){
+        document.getElementById("check_BMI").innerHTML="over weight"
+    }
+    else if (bmi >= 30 && bmi <35){
+        document.getElementById("check_BMI").innerHTML="obese"
+    } 
+    else if (bmi >= 35) {
+        document.getElementById("check_BMI").innerHTML="clinically obese"
+    }
+}
+
+// 8. Solve the quadratic equation 2x2−4x−6=02x^2 - 4x - 6 = 02x2−4x−6=0 using Python. Determine the number and type of roots based on the value of the discriminant.
+function quadratic(){
+    var a=Number(prompt("enter value of a"))
+    var b=Number(prompt("enter value of b"))
+    var c=Number(prompt("enter value of c"))
+    var d=b**2-(4*a*c)
+    if(d>0){
+        var d1=-b+((d)**0.5)/2*a
+        var d2=-b-((d)**0.5)/2*b
+        document.getElementById("result").innerHTML="two solution are possible d1="+d1+"d2="+d2
+    }
+    else if(d<0){
+        document.getElementById("result").innerHTML="no solution are possible ";
+    }
+    else{
+        var d1=-b+((d)**0.5)/2*a 
+        document.getElementById("result").innerHTML="one solution is possible d1="+d1;
+    }
+
+}
+
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string  assignment</title>
+</head>
+<body>
+    <script>
+        
+//  1. Write a Python program  to reverse a given string.
+// Input: Hello, World
+// Output: dlroW ,olleH
+
+        // let para='hello world'
+        // document.write('')
+
+//  2. Write a program to find the first and last occurrence of the letter "o" and character "," in the string "Hello, World".
+
+    let para="hello,world!"
+     document.write(para.indexOf("o")+'<br>')
+     document.write(para.indexOf(",")+'<br>')
+
+//   3.   Write a Python program to get a string from a given string where all occurrences of its first char have been changed to "@", except the first char itself.
+// Input: “python programming performs major role in DA”
+// Output: “python @rogramming @erforms major role in DA”
+
+let par = 'python programming performs major role in DA'
+ document.write(par.replace(/p/g,'@') +'<br>')
+document.write(par.length+'<br>')
+
+// 4.  Write a Python function to compress a string by replacing repeated characters with their count.
+// 	input: "aaabbbbccc"
+// # Output: "a3b4c3"
+
+// repeat
+let input="aaabbbbccc";
+document.write(input.repeat(3)+"<br>")
+document.write(input.replace(/a/g,"3")+"<br>")
+
+// 5. Write a program to find the last position of a substring "Emma" in the string 
+// "Emma is a data scientist who knows Python. Emma works at google".
+
+let string='Emma';
+document.write(string.endsWith('ma')+'<br>')
+
+// 6.Write a Python function to find the longest word in a string.
+// Input: "The quick brown fox"
+// Output: "quick"
+
+let out="The quick brown fox"
+document.write(out.slice(4,9)+'<br>')
+
+// 7. Write a Python function that counts the number of vowels and consonants in a string.
+ 
+let vovals='aeiou';
+document.write(vovals.length+'<br>')
+
+console.log(vovals.length)
+
+
+
+
+ 
+    
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LET,const,function,array</title>
+</head>
+<body>
+    <script>
+
+        // function
+        // 1. function without parameter without return
+        // 2. function without parameter with return
+        // 3. function with parameter without return
+        // 4. function with parameter with return
+
+        // 1. function without parameter without return
+       function getelementbyid(id){   //id parameter
+        console.log(id)
+       }
+       getelementbyid(67)  //actual value. argument
+
+        // 3. function with parameter without return
+        // 4. function with parameter with return
+       function sum(a,b){
+        console.log(a+b)
+        return (a+b)
+       }
+       let result=sum(6,7)
+       console.log('outside function'+result)
+      let f=90
+      console.log(f-result)
+
+      // 2. function without parameter with return
+      function solve(){
+        let age=90
+        let marks=78
+        let c=age-marks
+        return([age,marks])
+      }
+      let value=solve()
+      console.log(value[1])
+
+    </script>
+</body>
+</html>

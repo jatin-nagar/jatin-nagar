@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test question</title>
+</head>
+<body>
+    <input type="text" id="side1" placeholder="enter side1">
+    <input type="text" id="side2" placeholder="enter side2">
+    <input type="text" id="side3" placeholder="enter side3">
+    <p id="check_result"></p>
+    <button onclick="side_of_triangle()">check triangle</button>
+
+    <p id="decending"></p>
+    <button onclick="decending_order()">arrange order</button>
+
+    <!-- 1. except 3 side of triangle and check wheather the triangle is possible or not -->
+     <script>
+        function side_of_triangle(){
+            var side1=Number(document.getElementById("side1").value)
+            var side2=Number(document.getElementById("side2").value)
+            var side3=Number(document.getElementById("side3").value)
+            if(side1<(side2+side3)){
+                document.getElementById("check_result").innerHTML="this is triangle"
+            }
+            else if(side2<(side1+side3)){
+                document.getElementById("check_result").innerHTML="this is triangle"
+            }
+            else if(side3<(side1+side2)){
+                document.getElementById("check_result").innerHTML="this is triangle"
+            }
+            else{
+                document.getElementById("check_result").innerHTML="this is not a triangle"
+            }
+        }
+
+    //  2. except 3 no. from user and arrange them in decending order
+        function decending_order(){
+            var num1=Number(document.getElementById("enter num1"))
+            var num2=Number(document.getElementById("enter num2"))
+            var num3=Number(document.getElementById("enter num3"))
+            if(num1>num2 && num1>num3) {
+                document.getElementById("decending").value=num1+" "+ num2+" "+ num3;
+            }else if(num2>num1 && num2>num3){
+                 document.getElementById("decending").value=num2+" "+ num1+" "+ num3;
+            }
+             else if(num3>num1 && num3>num2){
+                document.getElementById("decending").value=num3+" "+ num1+" "+ num2;
+            }
+            else{
+                document.getElementById("decending").value=num3+" "+num2+" "+num1;
+            }
+
+         }
+
+
+
+        //  leap(4%==0) (100%==0)
+        // 6. write a program to check wheather a year is leap year or not -->
+     </script>
+</body>
+</html>

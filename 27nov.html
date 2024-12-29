@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loops</title>
+</head>
+<body>
+    <button onclick="table()">check</button>
+    <p id="result"></p>
+    <script>
+         for (var k=1;k<=10;k++){
+             document.write(k+"hello <br>");
+         }
+        
+         for (var j=10;j>=1;j--){
+            document.write(j+"jatin <br>");
+        }
+
+        function table(){
+            var num=parseInt(prompt("enter a number"))
+            for (var start=1;start<=10;start++){ 
+            document.getElementById("result").innerHTML+=num*start+"<br>"
+        }
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="marks" placeholder="enter marks">
+    <button onclick="grading()">getmarks</button>
+    <h2 id="result"></h2>
+
+    <input type="text" name="" id="enter_units" placeholder="enter_units">
+    <input type="text" name=""id="price" placeholder="price" disabled>
+    <button onclick="calculate_bill()">calculate bill</button>
+    <h2 id="bill_generated"></h2>
+    <script>
+        function grading(){
+            var marks=Number(document.getElementById("marks").value);
+            if(marks>=80){
+                document.getElementById("result").innerHTML="Grade A";
+            }
+            else if(marks>=65){
+                document.getElementById("result").innerHTML="Grade B";
+
+            }
+            else if(marks>=40){
+                document.getElementById("result").innerHTML="Grade C";
+            }
+            else {
+                document.getElementById("result").innerHTML="Grade F";
+            }
+
+        }
+
+        function calculate_bill(){
+            var units=Number(document.getElementById("enter_units").value=price)
+            if(units<=100){
+                var price=unit*2
+            document.getElementById("price").value=price;
+            }
+        else if(units<=200){
+            var price=units*5
+            document.getElementById("price").value=price;
+        }
+        else if(units<=300){
+            var price=units*7
+            document.getElementById("price").value=price;
+        }
+        else{
+            var price=units*10
+            document.getElementById("price").value=price;
+        }
+
+        }
+         
+
+    </script>
+</body>
+</html>

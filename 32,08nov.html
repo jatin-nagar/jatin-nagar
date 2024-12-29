@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function</title>
+</head>
+<body>
+    <input type="number" name="num1" id="num1" placeholder="Enter First Number">
+    <select name="operator" id="operator">
+        <option value="operator" disabled selected>Select Operator</option>
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value=""></option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+        <option value="*">*</option>
+    </select>
+    <input type="number" name="num2" id="num2" placeholder="Enter Second Number">
+    <span>=</span>
+    <input type="number" name="num3" id="num3" placeholder="Result">
+    <button onclick="click()">Click Me!</button>
+    <script>
+        function click(){
+            let num1=Number(document.getElementById("num1").value);
+            let operator=document.getElementById("operator").value;
+            let num2=Number(document.getElementById("num2").value);
+            switch(operator){
+                case "+":
+                    num3=sum(num1,num2);
+                    break;
+                case "-":
+                    num3=sub(num1,num2);
+                    break;
+                case "*":
+                    num3=mul(num1,num2);
+                    break;
+                case "/":
+                    num3=div(num1,num2);
+                    break;
+               
+            }
+            document.getElementById("num3").value=num3;
+            console.log(num3);
+        }
+
+
+        function sum(num1,num2){
+            return(num1+num2);
+        }
+        function sub(num1,num2){
+            return(num1-num2);
+        }
+        function mul(num1,num2){
+            return(num1*num2);
+        }
+        function div(num1,num2){
+            return(num1/num2);
+        }
+        
+    </script>
+</body>
+</html>

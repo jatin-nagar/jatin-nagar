@@ -1,0 +1,137 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Assignment</title>
+</head>
+<body>
+
+    <script>
+    //2.Write a js program that takes a array of numbers and returns a new list containing only the even numbers.
+        let array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        let new_array=[]
+        for (i of array){
+            if(i%2==0){
+                new_array.push(i);
+            }
+        }
+        console.log(new_array);
+
+        //filter method
+        let even_array = array.filter(function (v,i,a) {
+            return(v %2 ==0)
+        })
+        console.log(even_array);
+
+    //4.Write a program that prints all the  prime numbers in a array.
+        let p_array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+        let prime=[]
+        for(let k of p_array) {
+            half=parseInt(k/2)
+            let is_prime = false;
+            for (let j = 2; j <= half; j++) {
+                if (k % j == 0) {
+                    is_prime = true;
+                    break;
+                }
+         }
+         if(!is_prime){
+            prime.push(k)
+         }
+        }
+        console.log("Prime Number = " + prime);
+
+        //Filter Method
+        let prime_array = p_array.filter(function (v,i,a) {
+            let half = parseInt(v/2)
+            for (let j = 2; j <= half; j++) {
+                if (v % j == 0) {
+                    return false;
+                }
+            }
+            return true;
+        })
+        console.log("Prime Number = " + prime_array);
+    
+    //5.Write a program to reverse a list without using built-in functions or slicing.
+    let array_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    let reversed_array = []
+    for (let i = array_list.length - 1; i >= 0; i--){
+        reversed_array.push(array_list[i]);
+    }
+
+    console.log(reversed_array);
+
+    //6.Write a Python program that finds and prints all the prime numbers between 1 and 100.
+    let prime_numbers = []
+    for (let i = 1; i <= 100; i++) {
+        let is_prime = false;
+        half=parseInt(i/2);
+        for (let j = 2; j <= half; j++) {
+                if (i % j == 0) {
+                    is_prime = true;
+                    break;
+                }
+         }
+         if(!is_prime){
+            prime_numbers.push(i)
+         }
+         }
+         console.log(prime_numbers);
+
+    //7.Write a program to remove all occurrences of a specified element from a list.
+        let Original_list= [1, 2, 2, 3, 4, 2, 5]
+        let element_to_remove = 2
+        let new_list = Original_list.filter(function (v,i,a) {
+            return v != element_to_remove
+        })
+        console.log(new_list);
+
+    //8.Write a program that calculates the sum of the squares of all the even numbers between 1 and 50.
+        let sum_of_squares = 0;
+        for (let i = 1; i <= 50; i++) {
+            if (i % 2 == 0) {
+                sum_of_squares += i * i;
+            }
+        }
+        console.log(sum_of_squares);
+
+    //9.Write a program that takes two lists and returns a new list containing only the common elements between them.
+    let list1 = [1, 2, 3, 4, 5]
+    let list2 = [4, 5, 6, 7, 8]
+    let common_elements = list1.filter(function (v,i,a) {
+        return list2.includes(v)
+        })
+        console.log(common_elements);
+
+    //10.Write a program to find the second largest number in a list of integers.
+    let listnumbers = [5,10,8,20,15,45,98,67,72,91,92,100,105,3,5]
+    let lar_num=[0]
+    let sec_lar_num=[0]
+    for(i of listnumbers) {
+        if (i > lar_num[0]) {
+            sec_lar_num[0] = lar_num[0];
+            lar_num[0] = i;
+        }
+        else if (i > sec_lar_num[0]) {
+            sec_lar_num[0] = i;
+        }
+    }
+    console.log(sec_lar_num[0]);
+         
+    //12.Write a program that takes a list of numbers and rearranges it so that all the even numbers come before the odd numbers while preserving the order of even and odd numbers.
+        let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        let even_numbers = numbers.filter(function (v,i,a) {
+            return v % 2 == 0
+        });
+        let odd_numbers = numbers.filter(function (v,i,a) {
+            return v % 2 != 0
+        }); 
+        let result = even_numbers.concat(odd_numbers);
+        console.log(result);
+
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array practice</title>
+</head>
+<body>
+    <script>
+        //array
+
+        let array = [12,10,23,12,"array"]
+        console.log(array,length)
+        console.log(array[1],array[4])
+
+        //find index
+        console.log(array.indexOf(23))//(2)
+
+        //add element
+        array.push(200) // add in last position
+        array.unshift("javascript") //add in start position
+        console.log(array) 
+
+        //delete element
+        array.pop() // delete last value and (this is reverse of push)
+        array.shift() // delete start value and (this is reverse of unshift)
+        console.log(array)
+
+        //add in (mid) or (delete) 
+
+        // array.splice(index,deletecount,elements) (3 parts come in slice)
+        array.splice(3,0,"node js","js")
+        console.log(array)
+
+        array.splice(3,2,"jatin")
+        console.log(array)
+
+        array.splice(3,2)
+        console.log(array)
+    </script>
+</body>
+</html>

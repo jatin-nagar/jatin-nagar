@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string</title>
+</head>
+<body>
+    <script>
+        let para =' hello world!';
+        document.write('para'+para+'<br>')
+        document.write('para'+para.length+'<br>')
+        document.write('para'+para.charAt(3)+'<br>')
+        document.write('para'+para.indexOf('d')+'<br>')
+        document.write('para'+para.toUpperCase() +'<br>')
+        document.write('para'+para.toLowerCase() +'<br>')
+        document.write('para'+para.concat('javascript') +'<br>')
+        document.write('para'+para.includes('js') +'<br>')
+        document.write('para'+para.includes('ld!') +'<br>')
+        document.write('para'+para.includes('h') +'<br>')
+        document.write('para'+para.lastIndexOf('l') +'<br>')
+        document.write('para'+para.repeat('4') +'<br>')
+        document.write('para'+para.replace(/l/g,'j') +'<br>')
+        document.write('para'+para.replace(/L/gi,'j') +'<br>')
+        document.write('para'+para.padStart(20,'@') +'<br>')
+        document.write('para'+para.padEnd(20,'@') +'<br>')
+        document.write('para'+para.slice(2,10) +'<br>')
+        document.write('para'+para.split('') +'<br>')
+        document.write('para'+para.split(' ') +'<br>')
+        let str='  string  '
+        console.log(str.length)
+        console.log(str.trim().length)
+        console.log(str.trimEnd())
+        console.log(str.trimStart())
+
+        // for(let i=0;i<para.length;i++){
+        //     console.log(para[i]+'<br')
+        // }
+    </script>
+</body>
+</html>

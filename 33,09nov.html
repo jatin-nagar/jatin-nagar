@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+
+<script>
+    
+
+//array -> 
+
+let array=[7,9,"js",90.5,"react js"]
+
+console.log(array.length)
+// accessing elements 
+console.log(array[1],array[4])
+let ele=array[2]
+
+// 
+console.log(array.indexOf(90.5))
+// add elements 
+array.push(100)
+array.unshift("node js")
+console.log(array)
+// delete elements 
+
+array.pop()
+array.shift()
+console.log(array)
+
+// mid add/ delete
+
+// array.splice(index,deletecount,elements)
+array.splice(2,0,"node js","express")
+console.log(array)
+array.splice(3,1)
+console.log(array)
+array.splice(4,1,"javascript")
+console.log(array)
+
+
+</script>
+
+</body>
+</html>

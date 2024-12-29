@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="list()">enter</button>
+    <script>
+        function list(){
+            var marks12=Number(prompt("enter marks of 12th class"))
+            if(marks12>70){
+                alert("you are eligible gor jee main")
+                var jeemains=Number(prompt("entern marks of jee mains"))
+            
+                if(jeemains>55){
+                    alert("you are eligible for advance")
+                }
+                else{
+                    alert("you are not eligible for jee mains exam")
+                }
+            }
+                else{
+                    alert("you are eligible for jee mains exam")
+
+
+                }
+            
+        
+    }
+    </script>
+</body>
+</html>

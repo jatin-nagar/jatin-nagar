@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Attendance</h1>
+    <input type="text" id="total_lecture" placeholder="enter total lectures"> <br>
+    <input type="text" id="attended" placeholder="enter attended lecture"><br>
+    <button onclick="attendance()">attendance</button><br>
+    <p id="exam_result"></p>
+
+    <h1>divisibile by 7 or not</h1>
+    <input type="text" placeholder="Enter Number" id="divisible_by_7">
+    <button onclick="check_number()">check number divisible by 7</button>
+    <input type="text"  id="check_result" placeholder="check_result">
+
+    <h1> positive or negative</h1>
+    <p id="check_positive_negative"></p>
+    <button onclick="positive_negative()">check positive or negative</button>
+
+    <h1>water boiling</h1>
+    <input type="text" id="temperature" placeholder="temperature in celsius">
+    <input type="text" id="check_boling" placeholder="check boiling">
+    <button onclick="water_boiling()">water boiling</button>
+
+
+
+
+   
+      <script>
+//  1.  Accept the following from the user and calculate the attendence percentage
+// Total lectures held
+// Total lectures attended
+// After calculating percentage , if the percentage is less than 75  student will not be able to sit in exam otherwise he is allowed for exam, 
+
+function attendance(){
+    var total_lecture=Number(document.getElementById("total_lecture").value)
+    var attendence_lecture=Number(document.getElementById("attended").value)
+    var percentage=(total_lecture/attendence_lecture)*100
+    if(percentage>=75){
+        document.getElementById("exam_result").innerHTML="allowed for exam"
+    }
+    else{
+        document.getElementById("exam_result").innerHTML="not allowed for exam"
+    }
+}
+
+//  2.Write a program to check whether the number is divisible by 7 or not
+
+function check_number(){
+    var number=Number(document.getElementById(divisible_by_7).value)
+    if(number%7==0){
+    document.getElementById("check_result").value="Divisible by 7"
+    }
+else{
+    document.getElementById("check_result").value="Not Divisible by 7"
+}
+}
+
+// 3.Write a program to check whether  the number is positive or negative
+
+function positive_negative(){
+    var number=Number(prompt("enter_Number"))
+    if(number>=0)
+    document.getElementById("check_positive_negative").innerHTML="positive Number"
+if(number<=0)
+document.getElementById("check_positive_negative").innerHTML="Negative Number"
+}
+
+// 4.Write a program to find the last digit of a number entered by user is divisible by 3 or not
+
+// function last_number(){
+//     var number=Number()
+// }
+
+// 5.Accept the temperature in degree celsius of water , check the water is boiling or not (use boiling point )
+
+function water_boiling(){
+    var boiling=Number(document.getElementById("temperature").value)
+    if(boiling_water>=100){
+        document.getElementById("check_boiling").value="Boiling"
+    }
+    else{
+        document.getElementById("check_boiling").value="Not Boiling"
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    </script>
+
+
+
+</body>
+</html>

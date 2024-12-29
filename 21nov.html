@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="side1" placeholder="enter_triangles">
+    <input type="number" id="side2" placeholder="enter_triangles">
+    <input type="number" id="side3" placeholder="enter_triangles">
+    <button onclick="check_triangle()">check triangle</button>
+  <p id="show"></p>
+
+    <script>
+function check_triangle(){
+  var a=Number(document.getElementById("side1").value);
+  var b=Number(document.getElementById("side2").value);
+  var c=Number(document.getElementById("side3").value);
+  if(a==b && b==c){
+    document.getElementById("show").innerHTML="equilateral triangle"
+  }
+  else if((a==b && b!=c) ||(a==c && c!=b) ||(b==c && c!=a)){
+    document.getElementById("show").innerHTML="isosceles triangle"
+  }
+  else{ 
+    document.getElementById("show").innerHTML="scalene triangle"
+  }
+}
+ 
+    </script>
+</body>
+</html>

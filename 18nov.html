@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fuctions</title>
+</head>
+<body>
+    <p id="result"></p>
+    <button onclick="check_age()">check age</button>
+
+    <input type="text" id="percentage" value="89" placeholder="enter percentage"> 
+    <p id="marks"></p>
+    <input type="text" id="show">
+    <button onclick="marks()">check marks</button>
+
+    <h1>Attendance</h1>
+    <input type="text" id="total_lecture" placeholder="enter total lectures"> <br>
+    <input type="text" id="attended" placeholder="enter attended lecture"><br>
+    <button onclick="attendance()">attendance</button>
+    <p id="exam_result"></p>
+
+
+    <script>
+        function check_age(){
+            var age=Number(prompt("enter age="))
+            if(age>=18){
+                document.getElementById("result").innerHTML="eligible for voting"
+            }
+                if(age<18){
+                  document.getElementById("result").innerHTML="not eligible for voting"
+                }   
+        }
+
+        function marks(){
+            // var marks=Number(prompt("enter marks="))
+            var marks=Number(document.getElementById("percentage").value)
+            if(marks>=70){
+                document.getElementById("marks").innerHTML="pass with merit"
+                document.getElementById("show").value="pass with merit"
+            }
+            else{
+                 document.getElementById("marks").innerHTML="pass"
+                  document.getElementById("show").value="pass"
+            }
+
+        }
+        
+        function attendance(){
+    var total_lecture=Number(document.getElementById("total_lecture").value)
+    var attendance_lecture=Number(document.getElementById("attended").value)
+    var percentage=(total_lecture/attendance_lecture)*100
+    if(percentage>=75){
+        document.getElementById("exam_result").innerHTML="allowed for exam"
+    }
+    else{
+        document.getElementById("exam_result").innerHTML="not allowed for exam"
+    }
+
+}
+        
+    </script>
+    
+</body>
+</html>
