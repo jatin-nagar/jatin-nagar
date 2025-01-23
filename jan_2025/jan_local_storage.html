@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // LOCAL STORAGE//
+
+      // adding value to local storage
+                           //key  , value//
+      localStorage.setItem("name", "jatin");
+      localStorage.setItem("age", "24"); // adding value to local storage
+
+      // getting value from local storage
+
+      let item = localStorage.getItem("name");
+      console.log(item);
+      document.write(item);
+
+      // clear all data
+      // localStorage.clear()
+
+      // remove one data
+      localStorage.removeItem("age");
+
+      // present number of item
+      let n = localStorage.length;
+      console.log(n);
+    </script>
+  </body>
+</html>

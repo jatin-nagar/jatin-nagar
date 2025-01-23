@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>math and date module</title>
+</head>
+<body>
+    <button id="roll">Roll dice</button>
+    <script>
+        //  <!-- math and date module -->
+
+        document.write(Math.PI+'<br>')
+        document.write(Math.SQRT1_2+'<br>')  //square root ki value 1.2
+        document.write(Math.SQRT2+'<br>')    //square root ki value 2
+        document.write(Math.sqrt(23)+'<br>')    //ye  method h iska square root ki value 23
+        document.write(Math.pow(6,4)+'<br>')   //  isme value ki power niklta h
+        document.write(Math.cbrt(8)+'<br>')   //  isme value ka cube root niklta h
+        document.write(Math.ceil(8.2)+'<br>')   //  isme value upward m round of hogi
+        document.write(Math.floor(8.2)+'<br>')   //  isme value downward m round of hogi
+        document.write(Math.max(8,23,34,56)+'<br>')   //  isme jo sabse badi value hogi vhi aygi
+        document.write(Math.min(8,23,34,56)+'<br>')   //  isme jo sabse choti value hogi vhi aygi
+        document.write(Math.round(7.5)+'<br>')   //  isme point ki value 5 s bdi h to 8 milega or choti h to sirf 7
+        document.write(Math.random()+'<br>')   //  isme (0 s 1)tk value generate krta h ye[1kabhi nhi dega]
+        document.write(Math.trunc(5.6)+'<br>')   //  ye point s phlay wali valye ko dega
+        document.write(Math.sin(Math.PI/180*90)+'<br>')   //  ye radian ko degree m dega
+        document.write(Math.cos(Math.PI/180*0)+'<br>')   //  ye radian ko degree m dega
+        document.write(Math.tan(Math.PI/180*45)+'<br>')   //  ye radian ko degree m dega
+        document.write(Math.log(10)+'<br>')   //  ek table hoti h usme log ati h
+        document.write(Math.log10(10)+'<br>')   //  ek table hoti h usme log ati h
+        document.write(Math.log2(10)+'<br>')   //  ek table hoti h usme log ati h
+
+        // date
+
+        var date=new Date();
+        document.write(date+'<br>')
+        document.write(date.getFullYear()+'<br>')
+        document.write(date.getDay()+'<br>')
+        document.write(date.getMonth()+'<br>')
+        document.write(date.getMinutes()+'<br>')
+        document.write(date.toLocaleDateString()+'<br>')
+        document.write(date.getTime()+'<br>') //ye 1971 jan s ye second milte h
+         
+        // let d=new Date(2025,0,15);
+        let d=new Date();
+        d.setDate
+        document.write(d+'<br>')
+
+        // dice game
+
+        function dice(){
+            let player1=Math.trunc(Math.random()*6)+1
+            let player2=Math.trunc(Math.random()*6)+1
+            if(player1>player2){
+                document.write("player1 win with "+player1+"  vs "+player2+'<br>' )
+            }
+            else if(player1==player2){
+                document.write("tie match with"+player1+" vs "+player2+'<br>' )
+            } 
+            else{
+                document.write("player2 win with"+player2+" vs  "+player1+'<br>' )
+            }
+        }
+
+        document.querySelector('#roll').addEventListener('click',dice)
+  </script>
+</body>
+</html>

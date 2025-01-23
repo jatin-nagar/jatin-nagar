@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom</title>
+</head>
+<body>
+
+ <!-- dom -->
+     <!-- document object model -->
+
+<h1 class="box">DOM</h1>
+    <p class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, dolorem.</p>
+
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+
+    <input type="text" name="usename" value="username"><br>
+
+
+    <input type="text" name="usename" value="" id="screen">
+    <button class="btn">4</button>
+    <button class="btn">5</button>
+    <button class="btn">6</button>
+    <button class="btn">+</button>
+    <button class="btn">-</button>
+    <button class="btn">/</button>
+    <button class="solve">=</button>
+       
+
+
+      <script>
+                 //selector
+          
+                 function time(){
+    let date=new Date();
+    document.getElementsByClassName('box')[0].innerHTML=date.getSeconds();
+    // console.log(date)
+}
+time();
+
+      // by class name
+       let num= document.getElementsByClassName('box')//[1]
+       console.log(num)
+    //    num[1].innerHTML='my new text'
+
+    // by tag name
+    let num1= document.getElementsByTagName('li')
+       console.log(num)
+
+       for(let i=0;i<num1.length;i++){
+        num1[i].style.color='red'
+        num1[i].style.backgroundColor='yellow'
+       }
+
+       // by name 
+       let input= document.getElementsByName("username")
+       console.log(input)
+
+    //    queryselector
+    let node= document.querySelector(".box")  // # is id selector , . is class selector 
+    console.log(node);
+
+    let nodes=document.querySelectorAll('.box')
+    console.log(nodes);
+
+    // get all button
+    let button=document.querySelectorAll('.btn')
+    console.log(button)
+     for(let k=0;k<button.length;k++){
+        button[k]. onclick=function(){
+            // console.log('button clicked')
+            let v=button[k].innerHTML
+            console.log(v)
+            document.querySelector('#screen').value+=v
+        }
+    }
+// solve equation
+let solvebtn=document.querySelector('.solve')
+solvebtn.onclick=function(){
+    let equation=document.querySelector('#screen').value
+    let sol=eval(equation)
+    document.querySelector('#screen').value=sol
+}
+
+
+      </script>
+</body>
+</html>

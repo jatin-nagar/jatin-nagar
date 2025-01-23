@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main1{
+    height: 100vh;
+    background-color: rgba(11, 141, 241, 0.87);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+p{
+    text-align: center;
+   margin-left: 10px;
+    font-size: 50px;
+}
+
+.main{
+    height: 500px;
+    border: 5px solid black;
+    width: 30%;
+   border-radius: 6px;
+    background-color: white;
+    text-align: center;
+    font-size: 40px;
+    
+}
+
+.task{
+    display: flex;
+    place-items: center;
+    /* background-color: gainsboro; */
+    justify-content:space-around;
+}
+
+input{
+    font-size: 25px;
+    height: 50px;
+    text-align: center;
+    border: 3px solid black;
+}
+
+button{
+    border-radius: 5px;
+   font-size: 25px;
+height:50px;
+}
+
+button:hover{
+    background-color: rgb(139, 83, 83);
+}
+
+

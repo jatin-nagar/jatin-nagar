@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            height: 200px;
+            width: 200px;
+            border: 2px solid red;
+            background-color: aqua;
+        }
+
+        .head {
+            height: 200px;
+            width: 200px;
+            border: 2px solid red;
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p id="tag">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam itaque nulla quae voluptatum illum
+        repellendus reiciendis quaerat unde sequi officia.
+
+    </p>
+    <button id="btn">add class</button>
+    <button id="btn1">remove class</button>
+    <button id="btn2">replace class</button>
+    <button id="btn3">toggle class</button>
+    <button id="btn4">remove event</button>
+    <button id="btn4">start</button>
+
+    <script>
+        let p = document.querySelector("#tag")
+
+        function addclass() {
+            p.classList.add("box")
+        }
+        document.querySelector("#btn").addEventListener("click", addclass)
+        document.querySelector("#btn1").addEventListener("click", function () {
+            p.classList.remove("box")
+        })
+        document.querySelector("#btn2").addEventListener("click", function () {
+            p.classList.replace("box", "head")
+        })
+        document.querySelector("#btn3").addEventListener("click", function () {
+            p.classList.toggle("box")
+        })
+        // mouse move
+
+        function getrandomvalue() {
+            p.innerHTML = Math.random()}
+
+        document.body.addEventListener("mousemove",getrandomvalue) 
+        document.querySelector("#btn4").addEventListener("click", function () {
+            document.body.removeEventListener("mousemove",getrandomvalue)})
+
+
+    </script>
+</body>
+
+</html>
